@@ -9,6 +9,6 @@ RUN npm install
 
 COPY index.js .
 
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
 
 EXPOSE 8000
