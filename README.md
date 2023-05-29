@@ -43,7 +43,7 @@ docker build -t rtsp-snapshot-service .
 Run the Docker container using the built image:
 
 ```
-docker run -e RTSP_URL=xyz -p 8000:8000 rtsp-snapshot-service
+docker run -e RTSP_URL=xyz --network host -p 8000:8000 rtsp-snapshot-service
 ```
 
 This will start the service in a Docker container and map port 8000 on the host system to port 8000 in the container. You can now access the service by navigating to http://localhost:8000 in your web browser or making GET requests using command line utilities like curl or wget.
